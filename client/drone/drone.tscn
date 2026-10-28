@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://drone/drone.gd" id="1_drone"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frame"]
+size = Vector3(0.25, 0.06, 0.25)
+
+[node name="Drone" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("1_drone")
+
+[node name="Frame" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_frame")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, -0.08)
+current = true
+fov = 85.0
+near = 0.02

@@ -1,0 +1,15 @@
+[remap]
+
+importer="gaussian.splat.importer"
+importer_version=5
+type="Resource"
+uid="uid://c66gwusr7yo1s"
+path="res://.godot/imported/truck.splat-d6694cfea67f90fc1fd057525490cf90.res"
+
+[deps]
+
+source_file="res://maps/truck/truck.splat"
+dest_files=["res://.godot/imported/truck.splat-d6694cfea67f90fc1fd057525490cf90.res"]
+
+[params]
+

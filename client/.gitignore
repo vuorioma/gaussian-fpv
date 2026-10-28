@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Map splat data is large and third-party licensed; download separately
+/maps/**/*.splat
+/maps/**/*.ply
+/maps/**/*.sog

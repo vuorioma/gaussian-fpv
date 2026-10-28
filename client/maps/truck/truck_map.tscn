@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://maps/map.gd" id="1_map"]
+[ext_resource type="Resource" path="res://maps/truck/truck.splat" id="2_splat"]
+[ext_resource type="Script" path="res://addons/gdgs/runtime/nodes/gaussian_splat_node.gd" id="3_node"]
+
+[node name="TruckMap" type="Node3D" node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_map")
+bounds = AABB(-25, -0.4, -40, 55, 12.4, 65)
+spawn_point = NodePath("SpawnPoint")
+
+[node name="Truck" type="VisualInstance3D" parent="."]
+transform = Transform3D(-0.995541, -0.094022, -0.007589, 0.094022, -0.982626, -0.160019, 0.007589, -0.160019, 0.987085, 0, 4.15, 0)
+script = ExtResource("3_node")
+gaussian = ExtResource("2_splat")
+
+[node name="SpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.25, -6)
